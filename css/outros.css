@@ -3,7 +3,9 @@
         font-size: 1.2em;
         padding: 10px;
     }
-    .s2{
+    section .s2{
+        height: 600px;
+        background-size: 700px 500px;
         
     }
     footer{
