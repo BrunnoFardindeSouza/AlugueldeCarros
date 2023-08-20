@@ -105,7 +105,7 @@ secoes.map((el,i,a)=>{
                 div.style.margin='10px'
             
             // Estilo section 
-                section.style.width='100%'
+                section.style.width='99%'
                 section.style.padding='0px'
                 section.style.background='beige'
                 section.style.margin='auto' 
@@ -125,7 +125,6 @@ secoes.map((el,i,a)=>{
                 span.style.border='1ps solid #5151ffd5'
                 span.style.background='#d42626'
                 
-               
 
             // Estilo selecionar
                 selecionar.style.cursor='pointer'
@@ -137,13 +136,11 @@ secoes.map((el,i,a)=>{
                 selecionar.style.color='white'
                 selecionar.style.padding='0px'
                 selecionar.style.background='#d42626'
-                selecionar.style.margin='auto auto 10px auto'
             // Estilo fundo 
                 fundo.style.background='beige'
                 fundo.style.width='100%'
                 fundo.style.height='60px'
                 fundo.style.margin='auto'
-                fundo.style.padding='0px'
             // Appends
                 p.appendChild(div01)
                 div.appendChild(input)
@@ -173,10 +170,8 @@ expandir.map((el,i,a)=>{
     el.addEventListener('click',()=>{
         if(td_veiculos.style.display=='none'){
             td_veiculos.style.display='flex'
-            el.style.marginBottom='0px'
             fundo_carros.style.display='none'
         }else{
-            // el.style.marginBottom='40px'
             td_veiculos.style.display='none'
             fundo_carros.style.display='flex'
         }
