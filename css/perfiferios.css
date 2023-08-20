@@ -7,7 +7,7 @@
     justify-content: space-between;
 }
 .veiculo{
-    width: 99%;
+    width: 100%;
     margin-top: 20px;
     text-align: center;
 }
@@ -48,14 +48,6 @@ hr{
     margin: 10px auto;
     max-width: 700px;
 
-}
-.expandir{
-    width: 90%;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
-    border: 1px solid #5151ffd5;
-    background-color:#d42626;
 }
 .fundo_carros{
     display: none;
