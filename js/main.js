@@ -49,6 +49,7 @@ secoes.map((el,i,a)=>{
             const span = document.createElement('span')
             const section = document.createElement('section')
             const selecionar = document.createElement('div')
+            const fundo = document.createElement('div')
 
             el.appendChild(span)
 
@@ -65,7 +66,7 @@ secoes.map((el,i,a)=>{
                     section.setAttribute('class','carros') 
                 // Span
                     span.setAttribute('class','material-symbols-outlined expandir')
-                   
+                
                     span.innerHTML='expand_more'
                 //Div
                     div.setAttribute('class','ipn_radio')
@@ -73,10 +74,13 @@ secoes.map((el,i,a)=>{
                     input.setAttribute('type','radio')
                     input.setAttribute('name','carros')
                 // Selecionar
-                    selecionar.innerHTML='Ver veículo '
+                    selecionar.innerHTML='Ver selecionado '
                     selecionar.style.textAlign='center'
                     selecionar.setAttribute('class','selecionar')
-            
+                    
+                // fundo
+                    fundo.setAttribute('class','fundo_carros')
+                    fundo.innerHTML='Veículos:'
             // Estilo parágrafo
                 p.style.display='flex'
                 p.style.alignItems='center'
@@ -109,12 +113,18 @@ secoes.map((el,i,a)=>{
                 selecionar.style.background='red'
                 selecionar.style.color='white'
                 selecionar.style.margin='auto auto 10px auto'
-
+            // Estilo fundo 
+                fundo.style.background='beige'
+                fundo.style.width='90%'
+                fundo.style.height='40px'
+                fundo.style.margin='auto'
+                fundo.style.padding='10px'
             // Appends
                 p.appendChild(div01)
                 div.appendChild(input)
                 p.appendChild(div)  
                 section.appendChild(p)
+                el.appendChild(fundo)
                 div01.innerHTML=veiculos[c].nome;
                 container.firstElementChild.appendChild(section)
                 el.appendChild(selecionar)
@@ -128,14 +138,17 @@ secoes.map((el,i,a)=>{
 
 const expandir = [...document.getElementsByClassName('expandir')]
 const td_veiculos = document.getElementsByClassName('carros')[0]
+const fundo_carros = document.getElementsByClassName('fundo_carros')[0]
 expandir.map((el,i,a)=>{
     el.addEventListener('click',()=>{
         if(td_veiculos.style.display=='none'){
             td_veiculos.style.display='flex'
             el.style.marginBottom='0px'
+            fundo_carros.style.display='none'
         }else{
-            el.style.marginBottom='40px'
+            // el.style.marginBottom='40px'
             td_veiculos.style.display='none'
+            fundo_carros.style.display='flex'
         }
         
     })

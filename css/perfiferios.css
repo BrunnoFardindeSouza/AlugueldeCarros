@@ -1,42 +1,60 @@
 .aluguel{
     display: flex;
+    color: #5e5effce;
     align-items: center;
     flex-direction: column;
     background-color: white;
     justify-content: space-between;
 }
 .veiculo{
-    width: 100%;
+    width: 99%;
     margin-top: 20px;
     text-align: center;
-    border: 1px solid blue;
 }
-
+hr{
+    border: 1px solid #8a8aff;
+}
 .s1{
     height: auto;
 }
 .s1 > h2{
     margin: 10px;
 }
-.carros{
-    display: none;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 1px solid blue;
-    border-right: 1px solid blue;
-}
-.selecionar{
-    border: 1px solid #4747ffd0;
-}
 .expandir{
-    margin-bottom: 40px;
     width: 90%;
     padding: 10px;
     color: white;
     cursor: pointer;
     border: 1px solid #5151ffd5;
     background-color: red;
+}
+.fundo_carros{
+    display: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    text-shadow: 1px 1px 3px #000000cc;
+}
+.carros{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    animation: fechar 1s linear;
+    animation-timing-function: ease;
+}
+@keyframes fechar{
+    from{opacity: 0;}
+    to{opacity: 1;}
+    
+}
+.selecionar{
+    font-weight: bolder;
+    border: 1px solid #4747ffd0;
 }
 
 
