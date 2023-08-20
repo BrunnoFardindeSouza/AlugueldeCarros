@@ -105,15 +105,21 @@ secoes.map((el,i,a)=>{
                 div.style.margin='10px'
             
             // Estilo section 
-                section.style.width='90%'
-                section.style.padding='10px'
+                section.style.width='100%'
+                section.style.padding='0px'
                 section.style.background='beige'
                 section.style.margin='auto' 
+                
 
             // Estilo span
-                span.style.width='90%'
-                span.style.marginTop='10px'
-                span.style.padding='10px'
+                span.style.width='100%'
+                span.style.height='60px'
+                span.style.display='flex'
+                span.style.alignItems='center'
+                span.style.justifyContent='center'
+                span.style.marginTop='0px'
+                span.style.margin='auto'
+                span.style.padding='0px'
                 span.style.color='white'
                 span.style.cursor='pointer'
                 span.style.border='1ps solid #5151ffd5'
@@ -123,18 +129,21 @@ secoes.map((el,i,a)=>{
 
             // Estilo selecionar
                 selecionar.style.cursor='pointer'
-                selecionar.style.width='90%'
-                selecionar.style.height='30px'
+                selecionar.style.display='flex'
+                selecionar.style.alignItems='center'
+                selecionar.style.justifyContent='center'
+                selecionar.style.width='100%'
+                selecionar.style.height='60px'
                 selecionar.style.color='white'
-                selecionar.style.padding='10px'
+                selecionar.style.padding='0px'
                 selecionar.style.background='#d42626'
                 selecionar.style.margin='auto auto 10px auto'
             // Estilo fundo 
                 fundo.style.background='beige'
-                fundo.style.width='90%'
-                fundo.style.height='40px'
+                fundo.style.width='100%'
+                fundo.style.height='60px'
                 fundo.style.margin='auto'
-                fundo.style.padding='10px'
+                fundo.style.padding='0px'
             // Appends
                 p.appendChild(div01)
                 div.appendChild(input)
