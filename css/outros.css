@@ -1,17 +1,7 @@
 @media screen and (min-width:502px){
-    main section#Slide-Carros{
-        background-size: contain;
-        background-position:  top center;
-
-    }
-    main section#Carros{
-        flex-direction: row;
-    }
-    section#Carros  .Botoes_Carros{
-       height: 47px;
-    }
-    section#Carros > #ver_carros{
-        max-width: 410px;
+    section.itens-header{
+        font-size: 1.2em;
+        padding: 10px;
     }
     footer{
         display: flex;

@@ -73,7 +73,7 @@ secoes.map((el,i,a)=>{
                     input.setAttribute('type','radio')
                     input.setAttribute('name','carros')
                 // Selecionar
-                    selecionar.innerHTML='Ver veiculo '
+                    selecionar.innerHTML='Ver veículo '
                     selecionar.style.textAlign='center'
                     selecionar.setAttribute('class','selecionar')
             
