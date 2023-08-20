@@ -116,10 +116,10 @@ secoes.map((el,i,a)=>{
             // Estilo selecionar
                 selecionar.style.cursor='pointer'
                 selecionar.style.width='90%'
-                selecionar.style.padding='10px'
                 selecionar.style.height='30px'
-                selecionar.style.background='red'
                 selecionar.style.color='white'
+                selecionar.style.padding='10px'
+                selecionar.style.background='#d42626'
                 selecionar.style.margin='auto auto 10px auto'
             // Estilo fundo 
                 fundo.style.background='beige'
@@ -174,13 +174,18 @@ const s2 = document.getElementsByClassName('s2')[0]
 const s3 = document.getElementsByClassName('s3')[0]
 const h3 = document.createElement('h3');
 const p = document.createElement('p');
-const sh = [...document.getElementsByClassName('sh')]
+const sh = [...document.getElementsByClassName('sh')];
+const carros = document.getElementsByClassName('carros')[0]
+const fundo_carros = document.getElementsByClassName('fundo_carros')[0]
+
 selecionado.addEventListener('click',()=>{
     s2.style.display='flex'
     h3.innerHTML=''
     p.innerHTML=''
     p.value=''
     h3.value=''
+    carros.style.display='none'
+    fundo_carros.style.display='flex'
     sh.map((el)=>{
         el.style.display='block'
     })

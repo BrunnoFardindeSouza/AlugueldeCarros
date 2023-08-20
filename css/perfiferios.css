@@ -14,6 +14,9 @@
 hr{
     border: 1px solid #8a8aff;
 }
+.sh{
+    display: none;
+}
 .s1{
     height: auto;
 }
@@ -25,9 +28,9 @@ hr{
     height: 300px;
     background: center  no-repeat;
     background-size: contain;
-}
-.sh{
-    display: none;
+    animation: fechar 2s linear;
+    animation-timing-function: ease;
+    transition: 1s;
 }
 .s3{
     height: auto;
@@ -52,7 +55,7 @@ hr{
     color: white;
     cursor: pointer;
     border: 1px solid #5151ffd5;
-    background-color: red;
+    background-color:#d42626;
 }
 .fundo_carros{
     display: none;
