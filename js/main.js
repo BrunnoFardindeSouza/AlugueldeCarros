@@ -131,7 +131,7 @@ secoes.map((el,i,a)=>{
                 selecionar.style.margin='auto auto 10px auto'
             // Estilo fundo 
                 fundo.style.background='beige'
-                fundo.style.width='100%'
+                fundo.style.width='90%'
                 fundo.style.height='40px'
                 fundo.style.margin='auto'
                 fundo.style.padding='10px'
