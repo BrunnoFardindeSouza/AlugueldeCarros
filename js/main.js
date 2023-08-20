@@ -1,87 +1,144 @@
-let MenuCarros = document.getElementById('carros')
-const acao = [...document.getElementsByClassName('acao')]
-
-
+const secoes = [...document.getElementsByClassName('veiculo')];
+const container = document.getElementsByClassName('aluguel')[0];
 const veiculos =[{
-    vei0:{
         nome:'Hyundai HB20',
         imagem:''
     },
-    vei1:{
+    {
         nome:'Chevrolet Onix',
         imagem:''
     },
-    vei2:{
+    {
         nome:'Chevrolet Onix Plus',
         imagem:''
-        
+    
     },
-    vei3:{
+    {
         nome:'Fiat Mobi',
         imagem:''
         
     },
-    vei4:{
+    {
         nome:'Volkswagen Gol',
         imagem:''
         
     },
-    vei5:{
+    {
         nome:'Fiat Argo',
         imagem:''
         
     },
-    vei6:{
+    {
         nome:'Renault Kwid',
         imagem:''
         
     },
-    vei7:{
+    {
         nome:'Fiat Cronos',
         imagem:''
         
     },
-    vei8:{
+    {
         nome:'Volkswagen Voyage',
         imagem:''
         
-    }
-}]
-
-for(el of veiculos){
-    console.log(el)
-}
-
-
-
-function GeradorOptions(qtd){
-    for(c=0 ; c <= qtd ;c++){
-        let option = document.createElement('option')
-        //  atributos
-        option.setAttribute('id','carro'+c)
-        option.setAttribute('class','ListaDeCarros')
-
-        
-        // finalizando
-        MenuCarros.appendChild(option)
-    }
-}
-GeradorOptions(10)
-
-acao.map((el,i,a)=>{
+}];
+secoes.map((el,i,a)=>{
     if(i == 0){
-        // ver automovel
+        // Seleção de veiculos (Variaveis "Globais")
+            const span = document.createElement('span')
+            const section = document.createElement('section')
+            const selecionar = document.createElement('div')
 
+            el.appendChild(span)
+
+        for(c = 0;c<veiculos.length;c++){
+
+            // Varievis locais
+                const p = document.createElement('p');
+                const div = document.createElement('div')
+                const div01 = document.createElement('div')
+                const  input = document.createElement('input')
+            
+            // Configurações
+                // Sessão mãe
+                    section.setAttribute('class','carros') 
+                // Span
+                    span.setAttribute('class','material-symbols-outlined expandir')
+                   
+                    span.innerHTML='expand_more'
+                //Div
+                    div.setAttribute('class','ipn_radio')
+                // input
+                    input.setAttribute('type','radio')
+                    input.setAttribute('name','carros')
+                // Selecionar
+                    selecionar.innerHTML='Ver veiculo '
+                    selecionar.style.textAlign='center'
+                    selecionar.setAttribute('class','selecionar')
+            
+            // Estilo parágrafo
+                p.style.display='flex'
+                p.style.alignItems='center'
+                p.style.justifyContent='center'
+                p.style.margin='2px'
+                p.style.lineHeight='27px'
+                p.style.border='1px solid white'
+                p.style.width='100%'
+                p.style.color='white'
+                p.style.background='blue'
+            
+            // Estilo Div01
+                div01.style.width='50%'
+                div.style.margin='10px'
+            
+            // Estilo section 
+                section.style.width='90%'
+                section.style.padding='10px'
+                section.style.background='beige'
+                section.style.margin='auto' 
+
+            // Estilo span
+                span.style.marginTop='10px'
+
+            // Estilo selecionar
+                selecionar.style.cursor='pointer'
+                selecionar.style.width='90%'
+                selecionar.style.padding='10px'
+                selecionar.style.height='30px'
+                selecionar.style.background='red'
+                selecionar.style.color='white'
+                selecionar.style.margin='auto auto 10px auto'
+
+            // Appends
+                p.appendChild(div01)
+                div.appendChild(input)
+                p.appendChild(div)  
+                section.appendChild(p)
+                div01.innerHTML=veiculos[c].nome;
+                container.firstElementChild.appendChild(section)
+                el.appendChild(selecionar)
+        }    
+    }else if(i == 1){
+        // imagem do veiculo
     }else{
-        // selecionar automovel
-        el.addEventListener('click',()=>{
-            const carros = document.getElementById('carros')
-            
-            
-        })
-    }
+        // descrição do veiculo
+    }    
+})   
 
-
+const expandir = [...document.getElementsByClassName('expandir')]
+const td_veiculos = document.getElementsByClassName('carros')[0]
+expandir.map((el,i,a)=>{
+    el.addEventListener('click',()=>{
+        if(td_veiculos.style.display=='none'){
+            td_veiculos.style.display='flex'
+            el.style.marginBottom='0px'
+        }else{
+            el.style.marginBottom='40px'
+            td_veiculos.style.display='none'
+        }
+        
+    })
 })
 
 
@@ -91,20 +148,42 @@ acao.map((el,i,a)=>{
 
 
 
-/* CARROS
-
-"Hyundai HB20",
-"Chevrolet Onix",
-"Chevrolet Onix Plus",
-"Fiat Mobi",
-"Volkswagen Gol",
-"Fiat Argo",
-"Renault Kwid",
-"Fiat Cronos",
-"Volkswagen Voyage 1.0",
-" Renault Sandero S Edition 1.0",
-"Volkswagen Voyage;"
 
 
 
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
