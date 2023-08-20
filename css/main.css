@@ -68,14 +68,14 @@ main section#Carros{
     background-color:var(--bg-200);
 
 }
-section#Carros > #ver_carros{
+section#Carros > .ver_carros{
     height: 100%;
     min-width: 180px;
     margin: 0px 10px 0px 10px;
     border: 1px solid white;
     background-color:var(--bg-300);
 }
-section#Carros > #ver_carros > select{
+section#Carros > .ver_carros > select{
     border: 1px solid #000000ad;
     background-color: black;
     color: white;
@@ -85,7 +85,7 @@ section#Carros > #ver_carros > select{
     font-size: .9em;
     
 }
-section#Carros > .Botoes_Carros{
+section#Carros > .acao{
     border-radius: 3px;
     display: flex;
     align-items: center;
