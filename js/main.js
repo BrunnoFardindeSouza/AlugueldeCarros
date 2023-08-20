@@ -174,12 +174,16 @@ const s2 = document.getElementsByClassName('s2')[0]
 const s3 = document.getElementsByClassName('s3')[0]
 const h3 = document.createElement('h3');
 const p = document.createElement('p');
-
+const sh = [...document.getElementsByClassName('sh')]
 selecionado.addEventListener('click',()=>{
+    s2.style.display='flex'
     h3.innerHTML=''
     p.innerHTML=''
     p.value=''
     h3.value=''
+    sh.map((el)=>{
+        el.style.display='block'
+    })
     inputs.filter((el,i,a)=>{
         if(el.checked){
             const carro = el.parentNode.previousSibling.textContent;
