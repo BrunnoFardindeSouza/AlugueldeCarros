@@ -58,6 +58,9 @@ hr{
     border-right: 1px solid blue;
     text-shadow: 1px 1px 3px #000000cc;
 }
+.expandir{
+    border: 1px solid blue;
+}
 .carros{
     display:flex;
     align-items: center;

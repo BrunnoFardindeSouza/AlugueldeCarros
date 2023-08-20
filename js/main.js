@@ -105,14 +105,14 @@ secoes.map((el,i,a)=>{
                 div.style.margin='10px'
             
             // Estilo section 
-                section.style.width='100%'
+                section.style.width='90%'
                 section.style.padding='10px'
                 section.style.background='beige'
                 section.style.margin='auto' 
 
             // Estilo span
-                span.style.marginTop='0px'
-                span.style.width='100%'
+                span.style.width='90%'
+                span.style.marginTop='10px'
                 span.style.padding='10px'
                 span.style.color='white'
                 span.style.cursor='pointer'
@@ -123,7 +123,7 @@ secoes.map((el,i,a)=>{
 
             // Estilo selecionar
                 selecionar.style.cursor='pointer'
-                selecionar.style.width='100%'
+                selecionar.style.width='90%'
                 selecionar.style.height='30px'
                 selecionar.style.color='white'
                 selecionar.style.padding='10px'
