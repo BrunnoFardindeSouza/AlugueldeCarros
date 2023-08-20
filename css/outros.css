@@ -9,6 +9,9 @@
         
     }
     section .s3 p{
+        margin: auto;
+    }
+    section .s3 p{
         text-align: center;
     }
     footer{
