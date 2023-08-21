@@ -214,6 +214,7 @@ const h3 = document.createElement('h3');
 selecionado.addEventListener('click',()=>{
     
     // Coletando variaveis necessárias
+    const div = document.createElement('div')
     const s1 = document.getElementsByClassName('s1')[0]
     const s2 = document.getElementsByClassName('s2')[0]
     const s3 = document.getElementsByClassName('s3')[0]
@@ -240,6 +241,8 @@ selecionado.addEventListener('click',()=>{
     mae.style.background='white'
     expandir.style.background='#d80707'
     selecionado.style.background='#d80707'
+    div.style.height='100%'
+    div.style.background='#e9e9e349'
     
     
     // Filtrando qual input foi selecionada
@@ -259,8 +262,9 @@ selecionado.addEventListener('click',()=>{
                     h3.innerHTML=nome
                     p.innerHTML=descricao
                     // Dando append nos valores encontrados
+                    div.appendChild(p)
                     s3.appendChild(h3)
-                    s3.appendChild(p)
+                    s3.appendChild(div)
                     
                     
                     
