@@ -44,10 +44,10 @@ hr{
     transition: 1s;
     height: 300px;
     display: none;
-    background-size: contain;
     animation: fechar 2s linear;
     background-color: #0f0fa060;
     background: center  no-repeat;
+    background-size: contain;
     animation-timing-function: ease;
 }
 .s3{
