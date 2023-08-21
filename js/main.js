@@ -180,14 +180,14 @@ expandir.map((el,i,a)=>{
 });
 
 
-const selecionado = document.getElementsByClassName('selecionar')[0];
-const inputs = [...document.getElementsByName('carros')];
+const p = document.createElement('p');
+const h3 = document.createElement('h3');
 const s2 = document.getElementsByClassName('s2')[0]
 const s3 = document.getElementsByClassName('s3')[0]
-const h3 = document.createElement('h3');
-const p = document.createElement('p');
 const sh = [...document.getElementsByClassName('sh')];
+const inputs = [...document.getElementsByName('carros')];
 const carros = document.getElementsByClassName('carros')[0]
+const selecionado = document.getElementsByClassName('selecionar')[0];
 const fundo_carros = document.getElementsByClassName('fundo_carros')[0]
 
 selecionado.addEventListener('click',()=>{
