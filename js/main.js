@@ -63,84 +63,91 @@ secoes.map((el,i,a)=>{
 
         for(c = 0;c<veiculos.length;c++){
 
-            // Varievis locais
+            // (VARIAVEIS LOCAIS)
+            
                 const p = document.createElement('p');
                 const div = document.createElement('div')
                 const div01 = document.createElement('div')
                 const  input = document.createElement('input')
             
-            // Configurações
-                // Sessão mãe
+            // CONFIGURAÇÕES
+
+                // SESSÃO (SECTION_MÃE)
                     section.setAttribute('class','carros') 
-                // Span
+                // CONFIG (SPAN_EXPANDIR)
                     span.setAttribute('class','material-symbols-outlined expandir')
                 
                     span.innerHTML='expand_more'
-                //Div
+                // CONFIG (DIV_SUPORTE_RADIO)
                     div.setAttribute('class','ipn_radio')
-                // input
+                // CONFIG (INPUTS RADIO)
                     input.setAttribute('type','radio')
                     input.setAttribute('name','carros')
-                // Selecionar
+                // CONFIG (SELECIONAR_BTN)
                     selecionar.innerHTML='Ver selecionado '
                     selecionar.style.textAlign='center'
                     selecionar.setAttribute('class','selecionar')
                     
-                // fundo
+                // CONFIG (FUNDO)
                     fundo.setAttribute('class','fundo_carros')
                     fundo.innerHTML='Veículos:'
-            // Estilo parágrafo
-                p.style.display='flex'
-                p.style.alignItems='center'
-                p.style.justifyContent='center'
-                p.style.margin='2px'
-                p.style.lineHeight='27px'
-                p.style.border='1px solid white'
-                p.style.width='100%'
-                p.style.color='white'
-                p.style.background='#4141ad'
-            
-            // Estilo Div01
-                div01.style.width='50%'
-                div.style.margin='10px'
-            
-            // Estilo section 
-                section.style.width='99%'
-                section.style.padding='0px'
-                section.style.background='beige'
-                section.style.margin='auto' 
-                
 
-            // Estilo span
-                span.style.width='100%'
-                span.style.height='60px'
-                span.style.display='flex'
-                span.style.alignItems='center'
-                span.style.justifyContent='center'
-                span.style.marginTop='0px'
-                span.style.margin='auto'
-                span.style.padding='0px'
-                span.style.color='white'
-                span.style.cursor='pointer'
-                span.style.border='1ps solid #5151ffd5'
-                span.style.background='#d42626'
-                
+            // ESTILIZAÇÃO
 
-            // Estilo selecionar
-                selecionar.style.cursor='pointer'
-                selecionar.style.display='flex'
-                selecionar.style.alignItems='center'
-                selecionar.style.justifyContent='center'
-                selecionar.style.width='100%'
-                selecionar.style.height='60px'
-                selecionar.style.color='white'
-                selecionar.style.padding='0px'
-                selecionar.style.background='#d42626'
-            // Estilo fundo 
-                fundo.style.background='beige'
-                fundo.style.width='100%'
-                fundo.style.height='60px'
-                fundo.style.margin='auto'
+                // ESTILO (PARÁGRAFO_CADA_CARRO)
+                    p.style.display='flex'
+                    p.style.alignItems='center'
+                    p.style.justifyContent='center'
+                    p.style.margin='2px'
+                    p.style.lineHeight='27px'
+                    p.style.border='1px solid white'
+                    p.style.width='100%'
+                    p.style.color='white'
+                    p.style.background='#4141ad'
+                
+                // ESTILO (DIV-01_SUPORTE_IPN_RADIO)
+                    div01.style.width='50%'
+                    div.style.margin='10px'
+                
+                // ESTILO (SECTION_MÃE)
+                    section.style.width='99%'
+                    section.style.padding='0px'
+                    section.style.background='beige'
+                    section.style.margin='auto'
+                    section.style.display='none' 
+                    
+
+                // ESTILO (SPAN_EXPANDIR)
+                    span.style.width='100%'
+                    span.style.height='60px'
+                    span.style.display='flex'
+                    span.style.alignItems='center'
+                    span.style.justifyContent='center'
+                    span.style.marginTop='0px'
+                    span.style.margin='auto'
+                    span.style.padding='0px'
+                    span.style.color='white'
+                    span.style.cursor='pointer'
+                    span.style.border='1ps solid #5151ffd5'
+                    span.style.background='#d42626'
+                    
+
+                // ESTILO (BTN_SELECIONAR)
+                    selecionar.style.cursor='pointer'
+                    selecionar.style.display='flex'
+                    selecionar.style.alignItems='center'
+                    selecionar.style.justifyContent='center'
+                    selecionar.style.width='100%'
+                    selecionar.style.height='60px'
+                    selecionar.style.color='white'
+                    selecionar.style.padding='0px'
+                    selecionar.style.background='#d42626'
+                    selecionar.style.display='none'
+                // ESTILO (FUNDO)
+                    fundo.style.background='beige'
+                    fundo.style.width='100%'
+                    fundo.style.height='60px'
+                    fundo.style.margin='auto'
             // Appends
                 p.appendChild(div01)
                 div.appendChild(input)
@@ -164,56 +171,71 @@ secoes.map((el,i,a)=>{
 const expandir = [...document.getElementsByClassName('expandir')];
 
 expandir.map((el,i,a)=>{
+    // Coletando elementos necessários
     const td_veiculos = document.getElementsByClassName('carros')[0]
     const fundo_carros = document.getElementsByClassName('fundo_carros')[0]
-
+    const selecionar = document.getElementsByClassName('selecionar')[0]
+    // Ao clicar em expandir....
     el.addEventListener('click',()=>{
+        // Se todos veiculos estiverem fechados...
         if(td_veiculos.style.display=='none'){
-            td_veiculos.style.display='flex'
-            fundo_carros.style.display='none'
+
+            td_veiculos.style.display='flex';
+            selecionar.style.display='flex';
+            fundo_carros.style.display='none';
+
+        // Se não...
         }else{
-            td_veiculos.style.display='none'
-            fundo_carros.style.display='flex'
+
+            td_veiculos.style.display='none';
+            fundo_carros.style.display='flex';
         }
         
     })
 });
 
 
-const p = document.createElement('p');
-const h3 = document.createElement('h3');
-const s2 = document.getElementsByClassName('s2')[0]
-const s3 = document.getElementsByClassName('s3')[0]
-const sh = [...document.getElementsByClassName('sh')];
-const inputs = [...document.getElementsByName('carros')];
-const carros = document.getElementsByClassName('carros')[0]
 const selecionado = document.getElementsByClassName('selecionar')[0];
-const fundo_carros = document.getElementsByClassName('fundo_carros')[0]
 
 selecionado.addEventListener('click',()=>{
+    // Coletando variaveis necessárias
+    const p = document.createElement('p');
+    const h3 = document.createElement('h3');
+    const s2 = document.getElementsByClassName('s2')[0]
+    const s3 = document.getElementsByClassName('s3')[0]
+    const sh = [...document.getElementsByClassName('sh')];
+    const inputs = [...document.getElementsByName('carros')];
+    const carros = document.getElementsByClassName('carros')[0]
+    const fundo_carros = document.getElementsByClassName('fundo_carros')[0]
+    // Abrindo e fechando itens necessários
+    carros.style.display='none';
+    fundo_carros.style.display='flex';
+    sh.map((el)=>{
+        el.style.display='block'
+    });
+    // Limpando conteúdo após click
     s2.style.display='flex'
     h3.innerHTML=''
     p.innerHTML=''
     p.value=''
     h3.value=''
-    carros.style.display='none'
-    fundo_carros.style.display='flex'
-    sh.map((el)=>{
-        el.style.display='block'
-    })
+    // Filtrando qual input foi selecionada
     inputs.filter((el,i,a)=>{
         if(el.checked){
-            const carro = el.parentNode.previousSibling.textContent;
-            const busca = veiculos.filter((el,i,a)=>{
+            // Carro selecionado
+            const carro = el.parentNode.previousSibling.textContent; 
+            // Buscando carro no banco de dados
+            const busca = veiculos.filter((el,i,a)=>{ 
                 if(el.nome == carro){
+                    // coletando dados encontrados no banco de dados
                     const nome = el.nome
                     const imagem = el.imagem;
                     const descricao = el.descricao;
-                    
+                    // Retornando valores do banco de dados
                     s2.style.backgroundImage=`url("${imagem}")`
                     h3.innerHTML=nome
                     p.innerHTML=descricao
-                    
+                    // Dando append nos valores encontrados
                     s3.appendChild(h3)
                     s3.appendChild(p)
                     
