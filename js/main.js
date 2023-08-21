@@ -62,14 +62,12 @@ secoes.map((el,i,a)=>{
             el.appendChild(span)
 
         for(c = 0;c<veiculos.length;c++){
-
             // (VARIAVEIS LOCAIS)
-            
                 const p = document.createElement('p');
                 const div = document.createElement('div')
                 const div01 = document.createElement('div')
                 const  input = document.createElement('input')
-            
+
             // CONFIGURAÇÕES
 
                 // SESSÃO (SECTION_MÃE)
@@ -91,6 +89,8 @@ secoes.map((el,i,a)=>{
                 // CONFIG (FUNDO)
                     fundo.setAttribute('class','fundo_carros')
                     fundo.innerHTML='Veículos:'
+                // CONFIG (PARÁGRAFOS_CARROS)
+                    p.setAttribute('class','p_carros')
 
             // ESTILIZAÇÃO
 
@@ -112,7 +112,7 @@ secoes.map((el,i,a)=>{
                 // ESTILO (SECTION_MÃE)
                     section.style.width='99%'
                     section.style.padding='0px'
-                    section.style.background='beige'
+                    section.style.background='#f5f5dc56'
                     section.style.margin='auto'
                     section.style.display='none' 
                     
@@ -129,7 +129,7 @@ secoes.map((el,i,a)=>{
                     span.style.color='white'
                     span.style.cursor='pointer'
                     span.style.border='1ps solid #5151ffd5'
-                    span.style.background='#d42626'
+                    span.style.background='#d42626b0'
                     
 
                 // ESTILO (BTN_SELECIONAR)
@@ -141,8 +141,8 @@ secoes.map((el,i,a)=>{
                     selecionar.style.height='60px'
                     selecionar.style.color='white'
                     selecionar.style.padding='0px'
-                    selecionar.style.background='#d42626'
                     selecionar.style.display='none'
+                    selecionar.style.background='#d42626b0'
                 // ESTILO (FUNDO)
                     fundo.style.background='beige'
                     fundo.style.width='100%'
@@ -157,7 +157,6 @@ secoes.map((el,i,a)=>{
                 div01.innerHTML=veiculos[c].nome;
                 container.firstElementChild.appendChild(section)
                 el.appendChild(selecionar)
-                
                 const inputs = document.getElementsByName('carros')[0]
                 inputs.checked = 'checked'
         }    
@@ -207,12 +206,19 @@ selecionado.addEventListener('click',()=>{
     const inputs = [...document.getElementsByName('carros')];
     const carros = document.getElementsByClassName('carros')[0]
     const fundo_carros = document.getElementsByClassName('fundo_carros')[0]
+    const expandir = document.getElementsByClassName('expandir')[0]
+    const mae = document.getElementsByClassName('aluguel')[0]
+
     // Abrindo e fechando itens necessários
     carros.style.display='none';
     fundo_carros.style.display='flex';
     sh.map((el)=>{
         el.style.display='block'
     });
+    mae.style.background='white'
+    expandir.style.background='#d80707'
+    selecionado.style.background='#d80707'
+
     // Limpando conteúdo após click
     s2.style.display='flex'
     h3.innerHTML=''
@@ -257,21 +263,19 @@ selecionado.addEventListener('click',()=>{
 
 
 
+const p_carros = [...document.getElementsByClassName('p_carros')];
+
+p_carros.map((el,i,a)=>{
+    el.style.cursor='pointer'
+    el.addEventListener('click',()=>{
+        const input = el.firstChild.nextSibling.firstChild;
+        input.checked = 'cheked'
+       
+    })
+})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(p_carros)
 
 
 

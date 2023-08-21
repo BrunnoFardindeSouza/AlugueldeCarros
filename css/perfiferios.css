@@ -1,14 +1,17 @@
 .aluguel{
+    min-height: 100vh;
     display: flex;
     color: #5e5effce;
     align-items: center;
     flex-direction: column;
     background-color: white;
+    background: url('https://images8.alphacoders.com/705/705609.jpg') center  no-repeat;
+    background-size: cover;
     justify-content: space-between;
 }
 .veiculo{
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
 }
 hr{
@@ -90,6 +93,7 @@ hr{
     
 }
 .selecionar{
+    background-color: #d80707;
     font-weight: bolder;
 }
 
