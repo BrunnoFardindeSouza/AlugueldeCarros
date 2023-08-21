@@ -193,12 +193,27 @@ expandir.map((el,i,a)=>{
 });
 
 
+
+const p_carros = [...document.getElementsByClassName('p_carros')];
+
+p_carros.map((el,i,a)=>{
+    el.style.cursor='pointer'
+    el.addEventListener('click',()=>{
+        const input = el.firstChild.nextSibling.firstChild;
+        input.checked = 'cheked'
+        
+        
+    })
+})
+
 const selecionado = document.getElementsByClassName('selecionar')[0];
+const p = document.createElement('p');
+const h3 = document.createElement('h3');
+
 
 selecionado.addEventListener('click',()=>{
+    
     // Coletando variaveis necessárias
-    const p = document.createElement('p');
-    const h3 = document.createElement('h3');
     const s2 = document.getElementsByClassName('s2')[0]
     const s3 = document.getElementsByClassName('s3')[0]
     const sh = [...document.getElementsByClassName('sh')];
@@ -208,25 +223,25 @@ selecionado.addEventListener('click',()=>{
     const expandir = document.getElementsByClassName('expandir')[0]
     const mae = document.getElementsByClassName('aluguel')[0]
 
+    // Limpando conteúdo após click
+    s2.style.display='flex'
+    h3.innerHTML=''
+    p.innerHTML=''
+    h3.value=''
+    p.value=''
     // Abrindo e fechando itens necessários
     carros.style.display='none';
     selecionado.style.display='none'
     sh.map((el)=>{
         el.style.display='block'
-    });
-
+    });    
+    
     // Colorindo necessários
     mae.style.background='white'
     expandir.style.background='#d80707'
     selecionado.style.background='#d80707'
-
-
-    // Limpando conteúdo após click
-    s2.style.display='flex'
-    h3.innerHTML=''
-    p.innerHTML=''
-    p.value=''
-    h3.value=''
+    
+    
     // Filtrando qual input foi selecionada
     inputs.filter((el,i,a)=>{
         if(el.checked){
@@ -250,34 +265,22 @@ selecionado.addEventListener('click',()=>{
                     
                     
                     
-                }
+                }    
                 
-            });
+            });    
             
 
 
           
-        }
-    })
+        }    
+    })    
 
 
-})
+})    
 
 
 
-const p_carros = [...document.getElementsByClassName('p_carros')];
 
-p_carros.map((el,i,a)=>{
-    el.style.cursor='pointer'
-    el.addEventListener('click',()=>{
-        const input = el.firstChild.nextSibling.firstChild;
-        input.checked = 'cheked'
-       
-    })
-})
-
-
-console.log(p_carros)
 
 
 
