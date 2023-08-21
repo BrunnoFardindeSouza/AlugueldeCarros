@@ -1,4 +1,7 @@
 @media screen and (min-width:502px){
+    body{
+        font-size: 1.3em;
+    }
     section.itens-header{
         font-size: 1.2em;
         padding: 10px;
