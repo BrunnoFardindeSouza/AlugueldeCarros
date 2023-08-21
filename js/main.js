@@ -148,6 +148,7 @@ secoes.map((el,i,a)=>{
                     fundo.style.width='100%'
                     fundo.style.height='60px'
                     fundo.style.margin='auto'
+                    fundo.style.display='none'
             // Appends
                 p.appendChild(div01)
                 div.appendChild(input)
@@ -181,13 +182,11 @@ expandir.map((el,i,a)=>{
 
             td_veiculos.style.display='flex';
             selecionar.style.display='flex';
-            fundo_carros.style.display='none';
 
         // Se não...
         }else{
-
             td_veiculos.style.display='none';
-            fundo_carros.style.display='flex';
+            selecionar.style.display='none'
         }
         
     })
@@ -211,13 +210,16 @@ selecionado.addEventListener('click',()=>{
 
     // Abrindo e fechando itens necessários
     carros.style.display='none';
-    fundo_carros.style.display='flex';
+    selecionado.style.display='none'
     sh.map((el)=>{
         el.style.display='block'
     });
+
+    // Colorindo necessários
     mae.style.background='white'
     expandir.style.background='#d80707'
     selecionado.style.background='#d80707'
+
 
     // Limpando conteúdo após click
     s2.style.display='flex'
