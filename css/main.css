@@ -48,13 +48,14 @@ main{
  
 }
 footer{
-    border-top: 1px solid white;
     display:flex;
     width: 100%;
     bottom: 0px;
-    justify-content: space-between;
-    flex-direction: column;
     align-items: center;
+    font-weight: bolder;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 1px solid white;
     background-color: var(--principal);
 }
 footer > section{

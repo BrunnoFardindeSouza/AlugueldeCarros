@@ -23,12 +23,14 @@ hr{
     height: auto;
 }
 .s1 > h2{
+    color: white;
     padding: 10px;
     text-shadow: 1px 1px black;
     background-color: #0606ff93;
     border-bottom: 3px solid white;
 }
 .sh > h2{
+    color: white;
     text-shadow: 1px 1px black;
     background-color: #0606ff93;
 }
