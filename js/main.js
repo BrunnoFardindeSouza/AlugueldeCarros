@@ -98,7 +98,7 @@ secoes.map((el,i,a)=>{
                 p.style.border='1px solid white'
                 p.style.width='100%'
                 p.style.color='white'
-                p.style.background='blue'
+                p.style.background='#4141ad'
             
             // Estilo Div01
                 div01.style.width='50%'
