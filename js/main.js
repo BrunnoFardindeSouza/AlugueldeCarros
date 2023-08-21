@@ -55,7 +55,7 @@ const veiculos =[{
          nome:"Ford Ka 2021",
          imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfZEbawK_MOXUR-u1SKYzu1Sh6iXr3ec6pSQ&usqp=CAU",
          descricao:"São 128 cavalos de potência com gasolina e 136 cv com etanol, a 6.500 rpm, e torque de 15,6 e 16,1 kgfm, respectivamente, a 4.750 rpm. Outra novidade fica por conta do câmbio automático de seis marchas com conversor de torque, além da nova transmissão manual de cinco marchas com ré sincronizada."
-   }
+   
         
 }]
 secoes.map((el,i,a)=>{
