@@ -48,6 +48,7 @@ hr{
     animation: fechar 2s linear;
     animation-timing-function: ease;
     transition: 1s;
+    background-color: #0f0fa060;
 }
 .s3{
     height: auto;
@@ -55,6 +56,7 @@ hr{
 }
 .s3 > h3{
     margin: 5px;
+    margin-top: 20px;
     padding: 5px;
     padding: 15px;
     max-width: 710px;
