@@ -18,6 +18,9 @@
     section .s3 p{
         text-align: center;
     }
+    section .s3 h3{
+        margin: 40px auto auto auto;
+    }
     footer{
         display: flex;
         flex-direction: row;
