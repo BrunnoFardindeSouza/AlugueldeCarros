@@ -49,7 +49,13 @@ const veiculos =[{
     {
         nome:'Volkswagen Voyage',
         imagem:'https://img.favcars.com/volkswagen/voyage/wallpapers_volkswagen_voyage_2012_4_b.jpg',
-        descricao:"Um carro muito bonito por dentro e por fora dessa versão limitada, com muita potência no motor MSI, consumo ok, ótimo câmbio [o mais macio de todos], porta-malas muito grande e som original de fábrica bem satisfatório"
+        descricao:"Um carro muito bonito por dentro e por fora dessa versão limitada, com muita potência no motor MSI, consumo ok, ótimo câmbio [o mais macio de todos], porta-malas muito grande e som original de fábrica bem satisfatório",
+    },
+    {
+         nome:"Ford Ka 2021",
+         imagem:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfZEbawK_MOXUR-u1SKYzu1Sh6iXr3ec6pSQ&usqp=CAU",
+         descricao:"São 128 cavalos de potência com gasolina e 136 cv com etanol, a 6.500 rpm, e torque de 15,6 e 16,1 kgfm, respectivamente, a 4.750 rpm. Outra novidade fica por conta do câmbio automático de seis marchas com conversor de torque, além da nova transmissão manual de cinco marchas com ré sincronizada."
+   }
         
 }]
 secoes.map((el,i,a)=>{
