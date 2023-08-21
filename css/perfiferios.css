@@ -3,11 +3,11 @@
     min-height: 100vh;
     color: #5e5effce;
     align-items: center;
-    background-size: cover;
     flex-direction: column;
-    background-color: white;
     justify-content: space-between;
     background: url('https://images8.alphacoders.com/705/705609.jpg') center  no-repeat;
+    background-color: white;
+    background-size: cover;
 }
 .veiculo{
     width: 100%;
